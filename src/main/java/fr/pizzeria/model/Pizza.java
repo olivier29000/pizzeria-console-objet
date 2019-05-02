@@ -6,27 +6,31 @@ package fr.pizzeria.model;
  */
 public class Pizza {
 
-	/**id : int _ identifiant unique de l'objet pizza*/
+	/** id : int _ identifiant unique de l'objet pizza */
 	private int id = 0;
-	/**code : String _ code unique de l'objet pizza */
+	/** code : String _ code unique de l'objet pizza */
 	private String code;
-	/**libelle : String _ identifiant unique de l'objet pizza */
+	/** libelle : String _ identifiant unique de l'objet pizza */
 	private String libelle;
-	/**prix : double _ identifiant unique de l'objet pizza */
+	/** prix : double _ identifiant unique de l'objet pizza */
 	private double prix;
-	
-	/**compteur : int_ variable permettant de générer un id unique pour chaque pizza */
-	private static int compteur=0;
-	
-	/**Constructeur
+
+	/**
+	 * compteur : int_ variable permettant de générer un id unique pour chaque
+	 * pizza
+	 */
+	private static int compteur = 0;
+
+	/**
+	 * Constructeur
+	 * 
 	 * @param code
 	 * @param libelle
 	 * @param prix
 	 */
 	public Pizza(String code, String libelle, double prix) {
 
-		
-		this.id=compteur;
+		this.id = compteur;
 		this.code = code;
 		this.libelle = libelle;
 		this.prix = prix;
@@ -48,23 +52,6 @@ public class Pizza {
 	 */
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * Setter
-	 * 
-	 * @param id
-	 *            the id to set
-	 */
-	public void setId(int id) {
-		Pizza.id = id;
 	}
 
 	/**
@@ -99,6 +86,23 @@ public class Pizza {
 	 */
 	public void setPrix(double prix) {
 		this.prix = prix;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
