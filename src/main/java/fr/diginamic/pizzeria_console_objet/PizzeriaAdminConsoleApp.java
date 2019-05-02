@@ -52,8 +52,7 @@ public class PizzeriaAdminConsoleApp {
 		if (str == 1) {
 			System.out.println("Liste des pizzas");
 			for (int i = 0; i < listeDesPizzas.size(); i++) {
-				System.out.println(listeDesPizzas.get(i).getCode() + " -> " + listeDesPizzas.get(i).getLibelle() + " ("
-						+ listeDesPizzas.get(i).getPrix() + ") ");
+				System.out.println(listeDesPizzas.get(i).toString());
 			}
 
 			// Selection par l'utilisateur de l'option2
@@ -108,8 +107,7 @@ public class PizzeriaAdminConsoleApp {
 			// Affichage de la liste des pizzas
 			System.out.println("Liste des pizzas");
 			for (int i = 0; i < listeDesPizzas.size(); i++) {
-				System.out.println(listeDesPizzas.get(i).getCode() + " -> " + listeDesPizzas.get(i).getLibelle() + " ("
-						+ listeDesPizzas.get(i).getPrix() + ") ");
+				System.out.println(listeDesPizzas.get(i).toString());
 			}
 
 			// Selection par l'utilisateur de l'option1
@@ -189,8 +187,7 @@ public class PizzeriaAdminConsoleApp {
 			// Affichage de la liste des pizzas
 			System.out.println("Liste des pizzas");
 			for (int i = 0; i < listeDesPizzas.size(); i++) {
-				System.out.println(listeDesPizzas.get(i).getCode() + " -> " + listeDesPizzas.get(i).getLibelle() + " ("
-						+ listeDesPizzas.get(i).getPrix() + ") ");
+				System.out.println(listeDesPizzas.get(i).toString());
 			}
 
 		} else if (str == 4) {
@@ -231,8 +228,7 @@ public class PizzeriaAdminConsoleApp {
 			// Affichage de la liste des pizzas
 			System.out.println("Liste des pizzas");
 			for (int i = 0; i < listeDesPizzas.size(); i++) {
-				System.out.println(listeDesPizzas.get(i).getCode() + " -> " + listeDesPizzas.get(i).getLibelle() + " ("
-						+ listeDesPizzas.get(i).getPrix() + ") ");
+				System.out.println(listeDesPizzas.get(i).toString());
 			}
 
 		} else if (str == 99) {
