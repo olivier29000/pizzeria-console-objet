@@ -73,7 +73,23 @@ public class ModifierPizzaService extends MenuService {
 
 		System.out.println("Vous avez saisi le prix " + strPrix);
 
-		dao.updatePizza(strCodePizzaModifier, new Pizza(strCode, strNom, strPrix));
+		System.out.println("Veuillez choisir le type de pizza :");
+		System.out.println("1 : VIANDE");
+		System.out.println("2 : POISSON");
+		System.out.println("3 : SANS_VIANDE");
+
+		String strTypeDePizzaVerif = scanner.nextLine();
+		if (!NumberUtils.isCreatable(strTypeDePizzaVerif)) {
+			throw new StockageException("sélectionnez une des valeurs proposées svp (1, 2 ou 3)");
+		}
+		int strTypeDePizza = Integer.parseInt(strTypeDePizzaVerif);
+
+		CategoriePizza typeDePizza = dao.TrouverLaCategorieDeLapizza(strTypeDePizza);
+		if (typeDePizza == null) {
+			throw new StockageException("sélectionnez la bonne valeur svp");
+		}
+
+		dao.updatePizza(strCodePizzaModifier, new Pizza(strCode, strNom, strPrix, typeDePizza));
 
 	}
 

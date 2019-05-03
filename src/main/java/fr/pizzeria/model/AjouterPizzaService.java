@@ -28,6 +28,7 @@ public class AjouterPizzaService extends MenuService {
 		System.out.println("Veuillez saisir le nom (sans espace) :");
 		System.out.println("Au moins 5 caractères, maximum 15 caractères");
 		String strNom = scanner.nextLine();
+
 		if (strNom.length() < 6) {
 			throw new StockageException("Au moins 5 caractères");
 		}
@@ -53,7 +54,23 @@ public class AjouterPizzaService extends MenuService {
 
 		System.out.println("Vous avez saisi le prix " + strPrix);
 
-		dao.saveNewPizza(new Pizza(strCode, strNom, strPrix));
+		System.out.println("Veuillez choisir le type de pizza :");
+		System.out.println("1 : VIANDE");
+		System.out.println("2 : POISSON");
+		System.out.println("3 : SANS_VIANDE");
+
+		String strTypeDePizzaVerif = scanner.nextLine();
+		if (!NumberUtils.isCreatable(strTypeDePizzaVerif)) {
+			throw new StockageException("sélectionnez une des valeurs proposées svp (1, 2 ou 3)");
+		}
+		int strTypeDePizza = Integer.parseInt(strTypeDePizzaVerif);
+
+		CategoriePizza typeDePizza = dao.TrouverLaCategorieDeLapizza(strTypeDePizza);
+		if (typeDePizza == null) {
+			throw new StockageException("sélectionnez la bonne valeur svp");
+		}
+
+		dao.saveNewPizza(new Pizza(strCode, strNom, strPrix, typeDePizza));
 
 	}
 

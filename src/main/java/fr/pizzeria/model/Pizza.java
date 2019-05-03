@@ -14,6 +14,8 @@ public class Pizza {
 	private String libelle;
 	/** prix : double _ identifiant unique de l'objet pizza */
 	private double prix;
+	/** categoriePizza : CategoriePizza */
+	private CategoriePizza categoriePizza;
 
 	/**
 	 * compteur : int_ variable permettant de générer un id unique pour chaque
@@ -28,9 +30,10 @@ public class Pizza {
 	 * @param libelle
 	 * @param prix
 	 */
-	public Pizza(String code, String libelle, double prix) {
+	public Pizza(String code, String libelle, double prix, CategoriePizza categoriePizza) {
 
 		this.id = compteur;
+		this.categoriePizza = categoriePizza;
 		this.code = code;
 		this.libelle = libelle;
 		this.prix = prix;
@@ -45,7 +48,7 @@ public class Pizza {
 	 * simplement les differentes pizzas.
 	 */
 	public String toString() {
-		return this.code + " -> " + this.libelle + " (" + this.prix + ")";
+		return this.code + " -> " + this.libelle + " (" + this.prix + ") " + this.categoriePizza;
 	}
 
 	/**
