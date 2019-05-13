@@ -1,0 +1,22 @@
+11:48:52.751 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : param = aaa -> bfrtnrn (23.0) VIANDE
+12:00:50.464 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : modification d'une pizza = PEP -> Pépéroni (12.5) VIANDE ---> AAA -> AAAAAAAAA (22.0) POISSON
+12:15:07.100 [main] DEBUG f.d.p.PizzeriaAdminConsoleApp -
+				Demmarrage de l'application
+12:15:19.438 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : Création d'une pizza = fgfjgy -> gfhthrtjhtjrjh (32.0) POISSON
+12:15:45.470 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : modification d'une pizza = IND -> L’indienne (14.0) SANS_VIANDE ---> thrt -> rthrthrth (45.0) SANS_VIANDE
+12:15:51.790 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : suppression de la pizza = thrt -> rthrthrth (45.0) SANS_VIANDE
+12:15:54.366 [main] DEBUG f.d.p.PizzeriaAdminConsoleApp -
+				Fermeture de l'application
+12:18:11.725 [main] DEBUG f.d.p.PizzeriaAdminConsoleApp -
+				Demmarrage de l'application
+12:18:24.590 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : Création d'une pizza = dfgfd -> fgegtghge (56.0) VIANDE
+12:18:32.221 [main] DEBUG fr.pizzeria.model.MenuService -
+				Traitement 1 : suppression de la pizza = FRO -> La 4 fromages (12.0) SANS_VIANDE
+12:18:37.005 [main] DEBUG f.d.p.PizzeriaAdminConsoleApp -
+				Fermeture de l'application

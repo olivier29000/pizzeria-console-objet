@@ -18,4 +18,10 @@ public class ListerPizzasService extends MenuService {
 		}
 	}
 
+	@Override
+	public void executer(String param) {
+		// TODO Auto-generated method stub
+		LOG.debug("Traitement 1 : param = {}", param);
+	}
+
 }

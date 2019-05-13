@@ -6,6 +6,13 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 import exception.StockageException;
 
+/**
+ * 
+ * Execute le cas d'utilisation "2": Ajouter une nouvelle Pizza
+ * 
+ * @author Diginamic02
+ *
+ */
 public class AjouterPizzaService extends MenuService {
 
 	@Override
@@ -54,6 +61,7 @@ public class AjouterPizzaService extends MenuService {
 
 		System.out.println("Vous avez saisi le prix " + strPrix);
 
+		// Definition par l'utilisateur du prix de la nouvelle pizza
 		System.out.println("Veuillez choisir le type de pizza :");
 		System.out.println("1 : VIANDE");
 		System.out.println("2 : POISSON");
@@ -71,7 +79,14 @@ public class AjouterPizzaService extends MenuService {
 		}
 
 		dao.saveNewPizza(new Pizza(strCode, strNom, strPrix, typeDePizza));
+		executer(new Pizza(strCode, strNom, strPrix, typeDePizza).toString());
 
+	}
+
+	@Override
+	public void executer(String param) {
+		// TODO Auto-generated method stub
+		LOG.debug("Traitement 1 : Création d'une pizza = {}", param);
 	}
 
 }

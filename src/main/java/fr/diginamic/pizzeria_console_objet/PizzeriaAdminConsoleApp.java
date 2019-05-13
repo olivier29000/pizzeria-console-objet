@@ -2,6 +2,9 @@ package fr.diginamic.pizzeria_console_objet;
 
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import exception.StockageException;
 import fr.pizzeria.model.AjouterPizzaService;
 import fr.pizzeria.model.ListerPizzasService;
@@ -19,6 +22,8 @@ public class PizzeriaAdminConsoleApp {
 	 *            non utilisé ici
 	 * @throws StockageException
 	 */
+	private static final Logger LOG = LoggerFactory.getLogger(PizzeriaAdminConsoleApp.class);
+
 	public static void main(String[] args) throws StockageException {
 		// TODO Auto-generated method stub
 
@@ -27,6 +32,7 @@ public class PizzeriaAdminConsoleApp {
 		PizzaMemDao dao = new PizzaMemDao();
 		Scanner sc = new Scanner(System.in);
 		int str;
+		LOG.debug("Demmarrage de l'application");
 		do {
 
 			// Affichage du menu principal
@@ -89,6 +95,7 @@ public class PizzeriaAdminConsoleApp {
 
 			} else if (str == 99) {
 				System.out.println("Aurevoir ☹");
+				LOG.debug("Fermeture de l'application");
 			}
 
 		} while (str != 99);

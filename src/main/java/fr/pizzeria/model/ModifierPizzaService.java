@@ -89,8 +89,23 @@ public class ModifierPizzaService extends MenuService {
 			throw new StockageException("sélectionnez la bonne valeur svp");
 		}
 
+		Pizza pizzaEnCoursDeModif = null;
+		for (int i = 0; i < dao.findAllPizzas().size(); i++) {
+			if (dao.findAllPizzas().get(i).getCode().equals(strCodePizzaModifier)) {
+				pizzaEnCoursDeModif = dao.findAllPizzas().get(i);
+			}
+		}
+		String message = pizzaEnCoursDeModif.toString() + " ---> "
+				+ new Pizza(strCode, strNom, strPrix, typeDePizza).toString();
+		executer(message);
 		dao.updatePizza(strCodePizzaModifier, new Pizza(strCode, strNom, strPrix, typeDePizza));
 
+	}
+
+	@Override
+	public void executer(String param) {
+		// TODO Auto-generated method stub
+		LOG.debug("Traitement 1 : modification d'une pizza = {}", param);
 	}
 
 }

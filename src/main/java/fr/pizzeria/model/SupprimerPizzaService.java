@@ -27,7 +27,14 @@ public class SupprimerPizzaService extends MenuService {
 			System.out.println("Veuillez choisir le code de la pizza à modifier:");
 
 		}
+		String pizzaSuprrime = "";
+		for (int i = 0; i < dao.findAllPizzas().size(); i++) {
+			if (dao.findAllPizzas().get(i).getCode().equals(strCodePizzaModifier)) {
+				pizzaSuprrime = dao.findAllPizzas().get(i).toString();
+			}
 
+		}
+		executer(pizzaSuprrime);
 		dao.deletePizza(strCodePizzaModifier);
 
 		// Affichage de la liste des pizzas
@@ -35,6 +42,12 @@ public class SupprimerPizzaService extends MenuService {
 		for (int i = 0; i < dao.findAllPizzas().size(); i++) {
 			System.out.println(dao.findAllPizzas().get(i).toString());
 		}
+	}
+
+	@Override
+	public void executer(String param) {
+		// TODO Auto-generated method stub
+		LOG.debug("Traitement 1 : suppression de la pizza = {}", param);
 	}
 
 }

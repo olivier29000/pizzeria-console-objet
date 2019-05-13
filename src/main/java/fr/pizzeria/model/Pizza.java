@@ -1,8 +1,7 @@
 package fr.pizzeria.model;
 
 /**
- * @author Diginamic02
- *
+ * @author Diginamic02 Représente une Pizza
  */
 public class Pizza {
 
@@ -29,6 +28,7 @@ public class Pizza {
 	 * @param code
 	 * @param libelle
 	 * @param prix
+	 * @param categoriePizza
 	 */
 	public Pizza(String code, String libelle, double prix, CategoriePizza categoriePizza) {
 
@@ -166,6 +166,23 @@ public class Pizza {
 		if (Double.doubleToLongBits(prix) != Double.doubleToLongBits(other.prix))
 			return false;
 		return true;
+	}
+
+	/**
+	 * @return the categoriePizza
+	 */
+	public CategoriePizza getCategoriePizza() {
+		return categoriePizza;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param categoriePizza
+	 *            the categoriePizza to set
+	 */
+	public void setCategoriePizza(CategoriePizza categoriePizza) {
+		this.categoriePizza = categoriePizza;
 	}
 
 }

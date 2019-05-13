@@ -43,7 +43,11 @@ public class PizzaMemDao implements IPizzaDao {
 	@Override
 	public void saveNewPizza(Pizza pizza) {
 		// TODO Auto-generated method stub
-		listeDesPizzas.add(pizza);
+		if (pizza == null) {
+
+		} else {
+			listeDesPizzas.add(pizza);
+		}
 	}
 
 	@Override

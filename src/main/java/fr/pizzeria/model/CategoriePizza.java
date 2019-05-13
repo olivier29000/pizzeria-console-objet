@@ -14,6 +14,14 @@ public enum CategoriePizza {
 	private String typeDePizza;
 	private int codePizza;
 
+	/**
+	 * Constructeur
+	 * 
+	 * 
+	 * 
+	 * @param codePizza
+	 * @param typeDePizza
+	 */
 	private CategoriePizza(int codePizza, String typeDePizza) {
 		this.typeDePizza = typeDePizza;
 		this.codePizza = codePizza;
